@@ -1,0 +1,171 @@
+CRITICAL - 2021-05-22 02:18:20 --> syntax error, unexpected '?>'
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(55): view('pages/SlipGajiP...', Array)
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#8 {main}
+CRITICAL - 2021-05-22 02:32:36 --> Undefined index: Jabatan
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Views\pages\SlipGajiPage.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Bon ca...', 54, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\Bon ca...')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(55): view('pages/SlipGajiP...', Array)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#10 {main}
+CRITICAL - 2021-05-22 02:36:39 --> Undefined variable: data
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Views\pages\SlipGajiPage.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Bon ca...', 71, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\Bon ca...')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(55): view('pages/SlipGajiP...', Array)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#10 {main}
+CRITICAL - 2021-05-22 02:40:39 --> Undefined variable: data
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Views\pages\SlipGajiPage.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Bon ca...', 83, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\Bon ca...')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(55): view('pages/SlipGajiP...', Array)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#10 {main}
+CRITICAL - 2021-05-22 02:40:53 --> Undefined variable: data
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Views\pages\SlipGajiPage.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Bon ca...', 83, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\Bon ca...')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(55): view('pages/SlipGajiP...', Array)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#10 {main}
+CRITICAL - 2021-05-22 02:59:25 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-05-22 03:04:44 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 60
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:05:22 --> Incorrect output destination L
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): Mpdf\Mpdf->Output('slip-gaji.pdf', 'L')
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:05:54 --> Incorrect output destination PAGES/SLIPGAJIPAGE
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): Mpdf\Mpdf->Output('slip-gaji.pdf', 'PAGES/SLIPGAJIP...')
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:06:07 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 60
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:07:32 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-05-22 03:08:12 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 61
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(61): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:11:39 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 60
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:14:06 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 60
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:14:20 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::to() must be of the type string, null given, called in C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php on line 60
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(60): CodeIgniter\HTTP\RedirectResponse->to(NULL)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-22 03:18:49 --> syntax error, unexpected 'return' (T_RETURN)
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(282): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Bon ca...')
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(888): class_exists('\\App\\Controller...', true)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->startController()
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#9 {main}
+CRITICAL - 2021-05-22 03:18:59 --> Invalid file: page/SlipGajiPage.php
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page/SlipGajiPa...')
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('page/SlipGajiPa...', Array, true)
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(57): view('page/SlipGajiPa...', Array)
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#8 {main}
+CRITICAL - 2021-05-22 03:37:02 --> Invalid file: page/SlipGajiPage.php
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page/SlipGajiPa...')
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('page/SlipGajiPa...', Array, true)
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(56): view('page/SlipGajiPa...', Array)
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('4')
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#8 {main}
+CRITICAL - 2021-05-22 05:00:09 --> Undefined index: telat
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Views\pages\SlipGajiPage.php(3125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Bon ca...', 3125, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(230): include('C:\\Users\\Bon ca...')
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('pages/SlipGajiP...', Array, true)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(63): view('pages/SlipGajiP...', Array)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->print('3')
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#7 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#10 {main}

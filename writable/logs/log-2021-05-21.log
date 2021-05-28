@@ -1,0 +1,29 @@
+ERROR - 2021-05-21 00:29:57 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+ERROR - 2021-05-21 00:47:45 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+ERROR - 2021-05-21 00:47:51 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+ERROR - 2021-05-21 00:48:32 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2021-05-21 22:29:58 --> Call to undefined method App\Models\BonusModel::simpan
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(29): CodeIgniter\Model->__call('simpan', Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->simpan()
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-21 22:33:07 --> Call to undefined method App\Models\BonusModel::simpan
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(30): CodeIgniter\Model->__call('simpan', Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->simpan()
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#6 {main}
+CRITICAL - 2021-05-21 22:36:36 --> A non well formed numeric value encountered
+#0 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Models\BonusModel.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well form...', 'C:\\Users\\Bon ca...', 45, Array)
+#1 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\app\Controllers\BonusController.php(30): App\Models\BonusModel->simpan(Array)
+#2 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\BonusController->simpan()
+#3 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BonusController))
+#4 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\public\index.php(36): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\Bon cabe\Documents\pesanan\faris\farisApp\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\Bon ca...')
+#7 {main}
