@@ -23,9 +23,7 @@
 
                         <li>
                             <a class="login-area dropdown-toggle" data-toggle="dropdown">
-                                <div class="avatar" title="View your public profile">
-                                    <img src="/template/assets/img/avatars/adam-jansen.jpg">
-                                </div>
+                              
                                 <section>
                                     <h2><span class="profile"><span><?= session('nama') ?></span></span></h2>
                                 </section>
