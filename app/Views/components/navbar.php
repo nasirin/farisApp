@@ -4,9 +4,10 @@
             <!-- Navbar Barnd -->
             <div class="navbar-header pull-left">
                 <a href="/" class="navbar-brand">
-                    <small>
+                        <p>Bonus Karyawan</p>
+                    <!-- <small>
                         <img src="/template/assets/img/logo.png" alt="" />
-                    </small>
+                    </small> -->
                 </a>
             </div>
             <!-- /Navbar Barnd -->
