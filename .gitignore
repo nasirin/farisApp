@@ -1,0 +1,6 @@
+#vendor
+/vendor
+/writable
+
+# enviroment
+.env
