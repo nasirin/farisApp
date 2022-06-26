@@ -31,6 +31,12 @@
                 <span class=" menu-text"> Data Bonus </span>
             </a>
         </li>
+        <li>
+            <a href="#">
+                <i class="menu-icon glyphicon glyphicon-tasks""></i>
+                <span class=" menu-text"> Absensi </span>
+            </a>
+        </li>
     </ul>
     <!-- /Sidebar Menu -->
 </div>
