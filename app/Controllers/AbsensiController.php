@@ -17,6 +17,6 @@ class AbsensiController extends BaseController
 
 	public function index()
 	{
-		return view('layout/AbsensiLayout');
+		return view('layout/absensi/AbsensiLayout');
 	}
 }
