@@ -1,6 +1,4 @@
-#vendor
-/vendor
-/writable
-
-# enviroment
 .env
+vendor
+writable
+node_modules
