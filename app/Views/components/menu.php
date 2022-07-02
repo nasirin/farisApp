@@ -32,7 +32,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/absensi">
                 <i class="menu-icon glyphicon glyphicon-tasks""></i>
                 <span class=" menu-text"> Absensi </span>
             </a>

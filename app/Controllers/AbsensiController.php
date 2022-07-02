@@ -12,11 +12,11 @@ class AbsensiController extends BaseController
 
 	public function __construct()
 	{
-		$this->absensi = new AbsensiModel();	
+		$this->absensi = new AbsensiModel();
 	}
 
 	public function index()
 	{
-		return view('pages/absensi');
+		return view('layout/AbsensiLayout');
 	}
 }

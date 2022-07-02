@@ -47,6 +47,9 @@ $routes->group('auth', function ($routes) {
 	$routes->post('login', 'AuthController::login');
 	$routes->get('logout', 'AuthController::logout');
 });
+$routes->group('absensi', function ($routes) {
+	$routes->get('/', 'AbsensiController');
+});
 
 /*
  * --------------------------------------------------------------------
