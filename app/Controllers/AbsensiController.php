@@ -66,6 +66,21 @@ class AbsensiController extends BaseController
 
 	public function log()
 	{
-		return view('pages/absensi/LogAbsensiPage');
+		$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => date('m'), 'YEAR(created_at)' => date('Y')];
+		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => date('Y-m')];
+
+		return view('pages/absensi/LogAbsensiPage', $data);
+	}
+
+	public function filter()
+	{
+		$post = $this->request->getVar();
+		$tahun = date('Y', strtotime($post['date']));
+		$bulan = date('m', strtotime($post['date']));
+
+		$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => $bulan, 'YEAR(created_at)' => $tahun];
+		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => $post['date']];
+
+		return view('pages/absensi/LogAbsensiPage', $data);
 	}
 }

@@ -8,8 +8,9 @@
         Daftar absensi
     </a>
 
-    <form action="">
-        <input type="month" name="" id="" class="filter-input" value="<?= date('Y-m') ?>">
+    <form action="/absensi/log-absensi" method="POST" class="filter">
+        <input type="month" name="date" class="filter-input" value="<?= $value ?>">
+        <button type="submit" class="filter-btn">Tampilkan hasil</button>
     </form>
 
     <table class="table">
@@ -21,21 +22,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="tbody-tr">
-                <td class="tbody-td"><?= date('d D') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-            </tr>
-            <tr class="tbody-tr">
-                <td class="tbody-td"><?= date('d D') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-            </tr>
-            <tr class="tbody-tr">
-                <td class="tbody-td"><?= date('d D') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-                <td class="tbody-td"><?= date('H:i') ?></td>
-            </tr>
+            <?php foreach ($absensi_log as $value) : ?>
+                <tr class="tbody-tr">
+                    <td class="tbody-td"><?= date('d D', strtotime($value['created_at'])) ?></td>
+                    <td class="tbody-td"><?= date('H:i', strtotime($value['in'])) ?></td>
+                    <td class="tbody-td"><?= date('H:i', strtotime($value['out'])) ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </section>

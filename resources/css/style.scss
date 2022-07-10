@@ -91,8 +91,15 @@
     }
   }
 
-  .filter-input {
-    @apply w-full p-2 my-5 rounded-lg;
+  .filter {
+    @apply flex items-center justify-between gap-3;
+    .filter-input {
+      @apply w-10/12 p-2 my-5 rounded-lg;
+    }
+
+    .filter-btn {
+      @apply p-2 w-2/12 bg-lime-300 rounded-lg;
+    }
   }
 
   .table {

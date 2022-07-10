@@ -756,11 +756,24 @@ video {
   height: 1.5rem;
   width: 1.5rem;
 }
-.log-absensi-container .filter-input {
+.log-absensi-container .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.log-absensi-container .filter .filter-input {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  width: 100%;
+  width: 83.333333%;
   border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.log-absensi-container .filter .filter-btn {
+  width: 16.666667%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 242 100 / var(--tw-bg-opacity));
   padding: 0.5rem;
 }
 .log-absensi-container .table {
