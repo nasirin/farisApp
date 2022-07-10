@@ -78,3 +78,31 @@
     @apply fill-current w-4 h-4 mr-2;
   }
 }
+
+/* ------------------------------- logabsensi ------------------------------- */
+
+.log-absensi-container {
+  @apply container mx-auto p-2 bg-blue-200;
+
+  .title {
+    @apply text-xl font-semibold flex items-center gap-2;
+    svg {
+      @apply h-6 w-6;
+    }
+  }
+
+  .filter-input {
+    @apply w-full p-2 my-5 rounded-lg;
+  }
+
+  .table {
+    @apply w-full text-center items-center;
+
+    .tbody-tr {
+      @apply border-b-2;
+      .tbody-td {
+        @apply py-3;
+      }
+    }
+  }
+}

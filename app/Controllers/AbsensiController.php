@@ -66,6 +66,6 @@ class AbsensiController extends BaseController
 
 	public function log()
 	{
-		dd('log');
+		return view('pages/absensi/LogAbsensiPage');
 	}
 }

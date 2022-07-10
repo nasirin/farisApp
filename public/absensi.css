@@ -702,3 +702,76 @@ video {
   width: 1rem;
   fill: currentColor;
 }
+
+/* ------------------------------- logabsensi ------------------------------- */
+.log-absensi-container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .log-absensi-container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .log-absensi-container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .log-absensi-container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .log-absensi-container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .log-absensi-container {
+    max-width: 1536px;
+  }
+}
+.log-absensi-container {
+  margin-left: auto;
+  margin-right: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+}
+.log-absensi-container .title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.log-absensi-container .title svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.log-absensi-container .filter-input {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.log-absensi-container .table {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.log-absensi-container .table .tbody-tr {
+  border-bottom-width: 2px;
+}
+.log-absensi-container .table .tbody-tr .tbody-td {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
