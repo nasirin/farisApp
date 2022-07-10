@@ -17,7 +17,7 @@ class AbsensiModel extends Model
 	protected $allowedFields        = ['id_user', 'in', 'out'];
 
 	// Dates
-	protected $useTimestamps        = false;
+	protected $useTimestamps        = true;
 	protected $dateFormat           = 'datetime';
 	protected $createdField         = 'created_at';
 	protected $updatedField         = 'updated_at';
@@ -40,15 +40,15 @@ class AbsensiModel extends Model
 	protected $beforeDelete         = [];
 	protected $afterDelete          = [];
 
-	public function in($post)
+	public function masuk()
 	{
-		$data = ['id_user' => $post['id'], 'in' => $post['in']];
+		$data = ['id_user' => session('id'), 'in' => date('Y-m-d H:i:s')];
 		$this->db->table($this->table)->insert($data);
 	}
 
-	public function out($id)
+	public function keluar($id)
 	{
-		$data = ['out' => date("Y-M-d H:i:s")];
+		$data = ['out' => date("Y-m-d H:i:s"), 'updated_at' => date("Ymd")];
 		$this->db->table($this->table)->where($this->primaryKey, $id)->update($data);
 	}
 }

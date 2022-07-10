@@ -11,7 +11,17 @@
 </head>
 
 <body>
-    <h1 class="test">absensi</h1>
+    <!-- HEADER -->
+    <section class="header">
+        <div class="header-left">sistem Absensi karyawan</div>
+        <div class="header-right">PT. SATRIA ANTARAN PRIMA</div>
+    </section>
+    <!-- CONTENT -->
+
+    <?= $this->renderSection('content') ?>
+    <!-- ENDCONTENT -->
+
+
 </body>
 
 </html>

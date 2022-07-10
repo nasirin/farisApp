@@ -49,6 +49,9 @@ $routes->group('auth', function ($routes) {
 });
 $routes->group('absensi', function ($routes) {
 	$routes->get('/', 'AbsensiController');
+	$routes->get('masuk', 'AbsensiController::masuk');
+	$routes->get('keluar/(:num)', 'AbsensiController::keluar/$1');
+	$routes->get('log-absensi', 'AbsensiController::log');
 });
 
 /*

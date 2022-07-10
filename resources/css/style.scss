@@ -2,6 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-.test {
-    @apply text-red-300
+.header {
+  @apply bg-indigo-800 flex justify-between items-center p-10 text-white;
+
+  // header left
+  .header-left {
+    @apply text-2xl font-semibold;
+  }
+
+  // header right
+  .header-right {
+    @apply text-3xl font-bold;
+  }
+}
+
+.content {
+  @apply container mx-auto flex justify-between;
+
+  .content-left {
+    @apply w-1/2;
+    //   content 1
+    .content-1 {
+      @apply flex flex-col justify-center items-center text-2xl font-semibold;
+      p {
+        @apply py-10;
+        span {
+          @apply text-red-500;
+        }
+      }
+    }
+
+    //   content 2
+    .content-2 {
+      @apply flex justify-around items-center py-5;
+      .timer {
+        @apply border-gray-500 border p-2;
+      }
+      .masuk {
+        @apply bg-green-500 rounded-full border border-black p-2 font-semibold text-2xl;
+      }
+      .keluar {
+        @apply bg-red-500 rounded-full border border-black p-2 font-semibold text-2xl;
+      }
+    }
+  }
+
+  .content-right {
+    @apply w-1/2 p-10;
+
+    .content-right-title {
+      @apply flex justify-between items-center;
+      h6 {
+        @apply text-2xl font-semibold;
+      }
+      a {
+        @apply text-lg font-light underline;
+      }
+    }
+
+    .content-right-data {
+      @apply flex justify-around items-center p-5;
+    }
+  }
+}
+
+.alert_error {
+  @apply flex items-center bg-red-500 text-white text-sm font-bold px-4 py-3;
+  svg {
+    @apply fill-current w-4 h-4 mr-2;
+  }
+}
+.alert_success {
+  @apply flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3;
+  svg {
+    @apply fill-current w-4 h-4 mr-2;
+  }
 }
