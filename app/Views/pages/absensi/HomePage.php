@@ -34,13 +34,14 @@
         <!-- show data -->
         <?php if ($absensi_masuk) : ?>
             <div class="content-right-data">
-                <p><?= $absensi_masuk['in'] ?></p>
+                <p><?= date('H:i:s', strtotime($absensi_masuk['in'])) ?></p>
+
                 <p>Masuk</p>
             </div>
         <?php endif; ?>
         <?php if ($absensi_keluar) : ?>
             <div class="content-right-data">
-                <p><?= $absensi_keluar['out'] ?></p>
+                <p><?= date('H:i:s', strtotime($absensi_keluar['out'])) ?></p>
                 <p>Keluar</p>
             </div>
         <?php endif; ?>
