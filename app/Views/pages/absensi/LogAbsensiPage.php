@@ -26,7 +26,7 @@
                 <tr class="tbody-tr">
                     <td class="tbody-td"><?= date('d D', strtotime($value['created_at'])) ?></td>
                     <td class="tbody-td"><?= date('H:i', strtotime($value['in'])) ?></td>
-                    <td class="tbody-td"><?= date('H:i', strtotime($value['out'])) ?></td>
+                    <td class="tbody-td"><?= $value['out'] ? date('H:i', strtotime($value['out'])) : '-' ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

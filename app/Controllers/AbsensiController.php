@@ -68,7 +68,6 @@ class AbsensiController extends BaseController
 	{
 		$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => date('m'), 'YEAR(created_at)' => date('Y')];
 		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => date('Y-m')];
-
 		return view('pages/absensi/LogAbsensiPage', $data);
 	}
 

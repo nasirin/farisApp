@@ -14,13 +14,10 @@
     <!-- HEADER -->
     <section class="header">
         <div class="header-left">sistem Absensi karyawan</div>
-        <div class="header-right">PT. SATRIA ANTARAN PRIMA</div>
+        <a href="/" class="header-right">PT. SATRIA ANTARAN PRIMA</a>
     </section>
-    <!-- CONTENT -->
 
     <?= $this->renderSection('content') ?>
-    <!-- ENDCONTENT -->
-
 
 </body>
 
