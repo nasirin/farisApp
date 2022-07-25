@@ -16,30 +16,20 @@ class AbsensiController extends BaseController
 		$this->absensi = new AbsensiModel();
 	}
 
-	// $condition = ['id_user' => session('id'), 'created_at' => date('Ymd')];
-	// if ($isMany) {
-	// 	$this->absensi->where($condition)->orderBy('in', 'desc')->find();
-	// } else {
-	// 	$this->absensi->where($condition)->orderBy('in', 'desc')->first();
-	// }
-
 	public function index()
 	{
-		$condition_masuk = ['id_user' => session('id'), 'created_at' => date('Ymd')];
-		$condition_keluar = ['id_user' => session('id'), 'updated_at' => date('Ymd')];
-		$absensi_masuk = $this->absensi->where($condition_masuk)->orderBy('in', 'desc')->first();
-		$absensi_keluar = $this->absensi->where($condition_keluar)->orderBy('in', 'desc')->first();
+
 		$data = [
-			'absensi_masuk' => $absensi_masuk,
-			'absensi_keluar' => $absensi_keluar,
+			'absensi_masuk' => $this->absensi->in(),
+			'absensi_keluar' => $this->absensi->out()
 		];
+
 		return view('pages/absensi/HomePage', $data);
 	}
 
 	public function masuk()
 	{
-		$condition_masuk = ['id_user' => session('id'), 'created_at' => date('Ymd')];
-		$absensi_masuk = $this->absensi->where($condition_masuk)->orderBy('in', 'desc')->first();
+		$absensi_masuk = $this->absensi->in();
 		// dd($absensi_masuk);
 		if (!$absensi_masuk) {
 			$this->absensi->masuk();
@@ -52,9 +42,8 @@ class AbsensiController extends BaseController
 
 	public function keluar($id)
 	{
-		$condition_keluar = ['id_user' => session('id'), 'updated_at' => date('Ymd')];
-		$absensi_keluar = $this->absensi->where($condition_keluar)->orderBy('in', 'desc')->first();
-		// dd(!$absensi_keluar);
+		$absensi_keluar = $this->absensi->out();
+
 		if ($id > 0 && !$absensi_keluar) {
 			$this->absensi->keluar($id);
 			session()->setFlashdata('success', 'success');
@@ -66,8 +55,16 @@ class AbsensiController extends BaseController
 
 	public function log()
 	{
-		$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => date('m'), 'YEAR(created_at)' => date('Y')];
-		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => date('Y-m')];
+		$condition_keluar = [
+			'id_user' => session('id'),
+			'MONTH(created_at)' => date('m'),
+			'YEAR(created_at)' => date('Y')
+		];
+		$data = [
+			'absensi_log' => $this->absensi->where($condition_keluar)->find(),
+			'value' => date('Y-m'),
+			'employee' => $this->absensi->findAll()
+		];
 		return view('pages/absensi/LogAbsensiPage', $data);
 	}
 
@@ -81,5 +78,10 @@ class AbsensiController extends BaseController
 		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => $post['date']];
 
 		return view('pages/absensi/LogAbsensiPage', $data);
+	}
+
+	public function print()
+	{
+		dd('print');
 	}
 }

@@ -32,8 +32,8 @@
             </a>
         </li>
         <li>
-            <a href="/absensi">
-                <i class="menu-icon glyphicon glyphicon-tasks""></i>
+            <a href="<?= session('level') == 'admin' ? '/absensi/log-absensi' : '/absensi' ?>">
+                <i class="menu-icon glyphicon glyphicon-tasks"></i>
                 <span class=" menu-text"> Absensi </span>
             </a>
         </li>

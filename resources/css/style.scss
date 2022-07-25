@@ -93,8 +93,9 @@
 
   .filter {
     @apply flex items-center justify-between gap-3;
-    .filter-input {
-      @apply w-10/12 p-2 my-5 rounded-lg;
+    .filter-input,
+    .filter-select {
+      @apply w-5/12 p-2 my-5 rounded-lg;
     }
 
     .filter-btn {

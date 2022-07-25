@@ -16,7 +16,10 @@ class BonusMigration extends Migration
 			'jml_h_telat' => ['type' => 'int', 'constraint' => '16'],
 			'bln_bonus' => ['type' => 'varchar', 'constraint' => '10'],
 			'thn_bonus' => ['type' => 'int', 'constraint' => '4'],
-			'bawaat' => ['type' => 'varchar', 'constraint' => '16'],
+			'bawaan' => ['type' => 'varchar', 'constraint' => '16'],
+			'bonus' => ['type' => 'varchar', 'constraint' => '16'],
+			'denda' => ['type' => 'varchar', 'constraint' => '16'],
+			'total' => ['type' => 'varchar', 'constraint' => '16']
 		]);
 
 		$this->forge->addKey('id_bonus', true);

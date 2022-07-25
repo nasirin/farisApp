@@ -51,4 +51,18 @@ class AbsensiModel extends Model
 		$data = ['out' => date("Y-m-d H:i:s"), 'updated_at' => date("Ymd")];
 		$this->db->table($this->table)->where($this->primaryKey, $id)->update($data);
 	}
+
+	public function in()
+	{
+		$condition_masuk = ['id_user' => session('id'), 'created_at' => date('Ymd')];
+		return $this->db->table($this->table)
+			->where($condition_masuk)->get()->getRowArray();
+	}
+
+	public function out()
+	{
+		$condition_keluar = ['id_user' => session('id'), 'updated_at' => date('Ymd')];
+		return $this->db->table($this->table)
+			->where($condition_keluar)->get()->getRowArray();
+	}
 }
