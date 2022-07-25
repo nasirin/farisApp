@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AbsensiModel;
+use Dompdf\Dompdf;
 use phpDocumentor\Reflection\Types\Boolean;
 
 class AbsensiController extends BaseController
@@ -62,8 +63,7 @@ class AbsensiController extends BaseController
 		];
 		$data = [
 			'absensi_log' => $this->absensi->where($condition_keluar)->find(),
-			'value' => date('Y-m'),
-			'employee' => $this->absensi->findAll()
+			'value' => date('Y-m')
 		];
 		return view('pages/absensi/LogAbsensiPage', $data);
 	}
@@ -71,17 +71,22 @@ class AbsensiController extends BaseController
 	public function filter()
 	{
 		$post = $this->request->getVar();
-		$tahun = date('Y', strtotime($post['date']));
-		$bulan = date('m', strtotime($post['date']));
+		if ($post['btn'] == 'hasil') {
+			$tahun = date('Y', strtotime($post['date']));
+			$bulan = date('m', strtotime($post['date']));
 
-		$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => $bulan, 'YEAR(created_at)' => $tahun];
-		$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => $post['date']];
-
-		return view('pages/absensi/LogAbsensiPage', $data);
-	}
-
-	public function print()
-	{
-		dd('print');
+			$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => $bulan, 'YEAR(created_at)' => $tahun];
+			$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => $post['date']];
+			return view('pages/absensi/LogAbsensiPage', $data);
+		} else {
+			$tahun = date('Y', strtotime($post['date']));
+			$bulan = date('m', strtotime($post['date']));
+			$condition_keluar = [
+				'id_user' => session('id'),
+				'MONTH(created_at)' => $bulan,
+				'YEAR(created_at)' => $tahun
+			];
+			return view('pages/absensi/absensiPrint', $data = ['date' => $post['date']]);
+		}
 	}
 }

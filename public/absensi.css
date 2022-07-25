@@ -789,3 +789,7 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.log-absensi-container .table-print {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}

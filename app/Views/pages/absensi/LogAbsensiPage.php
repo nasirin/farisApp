@@ -14,10 +14,7 @@
     <form action="/absensi/log-absensi" method="POST" class="filter">
         <input type="month" name="date" class="filter-input" value="<?= $value ?>">
         <?php if (session('level') == 'admin') : ?>
-            <select name="karyawan" class="filter-select">
-                <option value="all">-- all --</option>
-                <option value="">nama karyawan</option>
-            </select>
+            <input type="text" name="karyawan" class="filter-input" placeholder="Masukan NIK karyawan">
         <?php endif ?>
         <button type="submit" name="btn" value="hasil" class="filter-btn">Tampilkan hasil</button>
         <?php if (session('level') == 'admin') : ?>
