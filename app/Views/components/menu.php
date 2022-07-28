@@ -31,6 +31,20 @@
                 <span class=" menu-text"> Data Bonus </span>
             </a>
         </li>
+        <?php if (session('level') == 'admin') : ?>
+            <li>
+                <a href="/karyawan/form">
+                    <i class="menu-icon glyphicon glyphicon-edit"></i>
+                    <span class="menu-text"> Form Karyawan </span>
+                </a>
+            </li>
+            <li>
+                <a href="/karyawan">
+                    <i class="menu-icon glyphicon glyphicon-edit"></i>
+                    <span class="menu-text"> Data Karyawan </span>
+                </a>
+            </li>
+        <?php endif; ?>
         <li>
             <a href="<?= session('level') == 'admin' ? '/absensi/log-absensi' : '/absensi' ?>">
                 <i class="menu-icon glyphicon glyphicon-tasks"></i>

@@ -14,7 +14,7 @@ class AuthModel extends Model
 	protected $returnType           = 'array';
 	protected $useSoftDeletes       = false;
 	protected $protectFields        = true;
-	protected $allowedFields        = ['nama_user', 'notelp_user', 'password', 'username', 'level'];
+	protected $allowedFields        = ['nik', 'nama_user', 'notelp_user', 'password', 'username', 'level'];
 
 	// Dates
 	protected $useTimestamps        = false;
@@ -39,4 +39,36 @@ class AuthModel extends Model
 	protected $afterFind            = [];
 	protected $beforeDelete         = [];
 	protected $afterDelete          = [];
+
+	public function create($post)
+	{
+		$data = [
+			'nik' => $post['nik'],
+			'nama_user' => $post['nama'],
+			'notelp_user' => $post['notelp'],
+			'password' => '12345678',
+			'username' => $post['nik'] . '-' . $post['level'],
+			'level' => $post['level']
+		];
+
+		$this->insert($data);
+	}
+
+	public function ubah($post, $id)
+	{
+		$data = [
+			'nik' => $post['nik'],
+			'nama_user' => $post['nama'],
+			'notelp_user' => $post['notelp'],
+			'username' => $post['nik'] . '-' . $post['level'],
+			'level' => $post['level']
+		];
+
+		$this->update($id, $data);
+	}
+
+	public function destroy($id)
+	{
+		$this->delete($id);
+	}
 }

@@ -46,7 +46,6 @@
             <tr class="tbody-tr">
                 <th>No</th>
                 <th>NIK</th>
-                <th>Nama</th>
                 <th>Tanggal</th>
                 <th>Jam Masuk</th>
                 <th>Jam Keluar</th>
@@ -56,7 +55,6 @@
             <tr class="tbody-tr">
                 <td class="tbody-td">1</td>
                 <td class="tbody-td">132231</td>
-                <td class="tbody-td">saipul</td>
                 <td class="tbody-td">23 juli 2022</td>
                 <td class="tbody-td">07:00</td>
                 <td class="tbody-td">16:00</td>

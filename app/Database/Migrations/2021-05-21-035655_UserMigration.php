@@ -15,6 +15,7 @@ class UserMigration extends Migration
 			'password' => ['type' => 'varchar', 'constraint' => '50'],
 			'username' => ['type' => 'varchar', 'constraint' => '30'],
 			'level' => ['type' => 'enum', 'constraint' => ['admin', 'karyawan']],
+			'nik' => ['type' => 'varchar', 'constraint' => '50'],
 		]);
 
 		$this->forge->addKey('id_user', true);

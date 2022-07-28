@@ -55,6 +55,15 @@ $routes->group('absensi', function ($routes) {
 	$routes->post('log-absensi', 'AbsensiController::filter');
 });
 
+$routes->group('karyawan', function ($routes) {
+	$routes->get('/', 'KaryawanController');
+	$routes->get('form', 'KaryawanController::create');
+	$routes->post('form', 'KaryawanController::push');
+	$routes->get('update/(:num)', 'KaryawanController::update/$1');
+	$routes->post('update/(:num)', 'KaryawanController::change/$1');
+	$routes->get('destroy/(:num)', 'KaryawanController::destroy/$1');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

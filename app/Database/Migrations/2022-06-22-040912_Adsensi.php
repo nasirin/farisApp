@@ -14,6 +14,7 @@ class Adsensi extends Migration
 			'in' => ['type' => 'datetime'],
 			'out' => ['type' => 'datetime', 'null' => true],
 			'created_at' => ['type' => 'date'],
+			'updated_at' => ['type' => 'date'],
 		]);
 
 		$this->forge->addKey('id_absensi', true);
