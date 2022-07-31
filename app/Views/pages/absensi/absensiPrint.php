@@ -33,32 +33,38 @@
             background-color: #04AA6D;
             color: white;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h1>Laporan absensi <?= $value ?></h1>
+    <h1>Laporan absensi <?= $karyawan_nama ? $karyawan_nama['nama_user'] : '' ?> </h1>
+    <h1><?= date('M Y', strtotime($value))  ?></h1>
     <table id="customers">
         <thead>
             <tr class="tbody-tr">
                 <th>No</th>
                 <th>NIK</th>
+                <th>Nama</th>
                 <th>Tanggal</th>
                 <th>Jam Masuk</th>
                 <th>Jam Keluar</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="tbody-tr">
-                <td class="tbody-td">1</td>
-                <td class="tbody-td">132231</td>
-                <td class="tbody-td">23 juli 2022</td>
-                <td class="tbody-td">07:00</td>
-                <td class="tbody-td">16:00</td>
-            </tr>
+            <?php foreach ($absensi_log as $key => $value) : ?>
+                <tr class="tbody-tr">
+                    <td class="tbody-td"><?= $key + 1 ?></td>
+                    <td class="tbody-td"><?= $value['nik'] ?></td>
+                    <td class="tbody-td"><?= $value['nama_user'] ?></td>
+                    <td class="tbody-td"><?= date('d M Y', strtotime($value['created_at']))  ?></td>
+                    <td class="tbody-td"><?= date('H:i:s', strtotime($value['in']))  ?></td>
+                    <td class="tbody-td"><?= date('H:i:s', strtotime($value['out']))  ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </body>

@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use App\Models\AbsensiModel;
 use App\Models\AuthModel;
 use Dompdf\Dompdf;
-use phpDocumentor\Reflection\Types\Boolean;
 
 class AbsensiController extends BaseController
 {
@@ -70,18 +69,23 @@ class AbsensiController extends BaseController
 	public function filter()
 	{
 		$post = $this->request->getVar();
-		// dd($post);
 		$data = [
 			'absensi_log' => $this->absensi->filter($post),
 			'value' => $post['date'],
 			'selected' => $post['karyawan'],
-			'karyawan' => $this->employee->getEmployees()
+			'karyawan' => $this->employee->getEmployees(),
+			'karyawan_nama' => $this->employee->find($post['karyawan'])
 		];
 
 		if ($post['btn'] == 'hasil') {
 			return view('pages/absensi/LogAbsensiPage', $data);
 		} else {
-			return view('pages/absensi/absensiPrint', $data);
+			$html = view('pages/absensi/absensiPrint', $data);
+			$pdf = new Dompdf();
+			$pdf->loadHtml($html);
+			$pdf->setPaper('A4', 'portrait');
+			$pdf->render();
+			$pdf->stream('laporan-absensi' . '-' . date('M-Y') . '.pdf');
 		}
 	}
 }
