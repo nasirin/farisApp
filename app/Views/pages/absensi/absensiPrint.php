@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <h1>Laporan absensi <?= $date ?></h1>
+    <h1>Laporan absensi <?= $value ?></h1>
     <table id="customers">
         <thead>
             <tr class="tbody-tr">

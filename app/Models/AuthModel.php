@@ -71,4 +71,9 @@ class AuthModel extends Model
 	{
 		$this->delete($id);
 	}
+
+	public function getEmployees()
+	{
+		return $this->db->table($this->table)->where('level', 'karyawan')->get()->getResultArray();
+	}
 }

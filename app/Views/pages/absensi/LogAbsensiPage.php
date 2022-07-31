@@ -14,7 +14,12 @@
     <form action="/absensi/log-absensi" method="POST" class="filter">
         <input type="month" name="date" class="filter-input" value="<?= $value ?>">
         <?php if (session('level') == 'admin') : ?>
-            <input type="text" name="karyawan" class="filter-input" placeholder="Masukan NIK karyawan">
+            <select name="karyawan" class="filter-input">
+                <option value='semua'> Semua</option>
+                <?php foreach ($karyawan as $value) : ?>
+                    <option value="<?= $value['id_user'] ?>" <?= $selected == $value['id_user'] ? 'selected' : '' ?>> <?= $value['nama_user'] ?></option>
+                <?php endforeach; ?>
+            </select>
         <?php endif ?>
         <button type="submit" name="btn" value="hasil" class="filter-btn">Tampilkan hasil</button>
         <?php if (session('level') == 'admin') : ?>
@@ -37,7 +42,7 @@
             <?php foreach ($absensi_log as $value) : ?>
                 <tr class="tbody-tr">
                     <?php if (session('level') == 'admin') : ?>
-                        <td>nama karyawan</td>
+                        <td><?= $value['nama_user'] ?></td>
                     <?php endif ?>
                     <td class="tbody-td"><?= date('d D', strtotime($value['created_at'])) ?></td>
                     <td class="tbody-td"><?= date('H:i', strtotime($value['in'])) ?></td>

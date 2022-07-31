@@ -4,17 +4,19 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AbsensiModel;
+use App\Models\AuthModel;
 use Dompdf\Dompdf;
 use phpDocumentor\Reflection\Types\Boolean;
 
 class AbsensiController extends BaseController
 {
 	protected $absensi;
-	protected $user;
+	protected $employee;
 
 	public function __construct()
 	{
 		$this->absensi = new AbsensiModel();
+		$this->employee = new AuthModel();
 	}
 
 	public function index()
@@ -31,7 +33,6 @@ class AbsensiController extends BaseController
 	public function masuk()
 	{
 		$absensi_masuk = $this->absensi->in();
-		// dd($absensi_masuk);
 		if (!$absensi_masuk) {
 			$this->absensi->masuk();
 			session()->setFlashdata('success', 'success');
@@ -56,37 +57,31 @@ class AbsensiController extends BaseController
 
 	public function log()
 	{
-		$condition_keluar = [
-			'id_user' => session('id'),
-			'MONTH(created_at)' => date('m'),
-			'YEAR(created_at)' => date('Y')
-		];
 		$data = [
-			'absensi_log' => $this->absensi->where($condition_keluar)->find(),
-			'value' => date('Y-m')
+			'absensi_log' => $this->absensi->log(),
+			'value' => date('Y-m'),
+			'karyawan' => $this->employee->getEmployees(),
+			'selected' => '',
 		];
+
 		return view('pages/absensi/LogAbsensiPage', $data);
 	}
 
 	public function filter()
 	{
 		$post = $this->request->getVar();
-		if ($post['btn'] == 'hasil') {
-			$tahun = date('Y', strtotime($post['date']));
-			$bulan = date('m', strtotime($post['date']));
+		// dd($post);
+		$data = [
+			'absensi_log' => $this->absensi->filter($post),
+			'value' => $post['date'],
+			'selected' => $post['karyawan'],
+			'karyawan' => $this->employee->getEmployees()
+		];
 
-			$condition_keluar = ['id_user' => session('id'), 'MONTH(created_at)' => $bulan, 'YEAR(created_at)' => $tahun];
-			$data = ['absensi_log' => $this->absensi->where($condition_keluar)->find(), 'value' => $post['date']];
+		if ($post['btn'] == 'hasil') {
 			return view('pages/absensi/LogAbsensiPage', $data);
 		} else {
-			$tahun = date('Y', strtotime($post['date']));
-			$bulan = date('m', strtotime($post['date']));
-			$condition_keluar = [
-				'id_user' => session('id'),
-				'MONTH(created_at)' => $bulan,
-				'YEAR(created_at)' => $tahun
-			];
-			return view('pages/absensi/absensiPrint', $data = ['date' => $post['date']]);
+			return view('pages/absensi/absensiPrint', $data);
 		}
 	}
 }
