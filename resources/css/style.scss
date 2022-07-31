@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 .header {
+  
   @apply bg-indigo-800 flex justify-between items-center p-10 text-white;
 
   // header left
