@@ -77,7 +77,7 @@ class AbsensiModel extends Model
 			];
 		} else {
 			$condition = [
-				'id_user' => session('id'),
+				'user.id_user' => session('id'),
 				'MONTH(created_at)' => date('m'),
 				'YEAR(created_at)' => date('Y')
 			];
