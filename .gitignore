@@ -1,6 +1,5 @@
 .env
-vendor
-writable
-node_modules
+/vendor
+/writable
 
-laporan/ref-laporan.docx
+/laporan/ref-laporan.docx
