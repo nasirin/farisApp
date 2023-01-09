@@ -1,0 +1,8 @@
+upgrade KP to TA, tambahan fiture : 
+1. absensi (karyawan)
+2. log absensi, sort by month years (karyawan)
+3. download log absensi excel / pdf (admin)
+
+total biaya 1 jt
+
+duedate akhir juli
