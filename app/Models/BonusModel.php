@@ -14,7 +14,7 @@ class BonusModel extends Model
 	protected $returnType           = 'array';
 	protected $useSoftDeletes       = false;
 	protected $protectFields        = true;
-	protected $allowedFields        = ['nama_karyawan', 'NIP', 'jabatan', 'jml_h_telat', 'bln_bonus', 'thn_bonus', 'bawaan', 'bonus', 'denda', 'total'];
+	protected $allowedFields        = ['id_user', 'jabatan', 'jml_h_telat', 'bln_bonus', 'thn_bonus', 'bawaan', 'bonus', 'denda', 'total'];
 
 	// Dates
 	protected $useTimestamps        = false;
@@ -46,8 +46,7 @@ class BonusModel extends Model
 		$denda = $post['telat'] * 10000;
 		$total = $bonus - $denda;
 		$data = [
-			'nama_karyawan' => $post['nama'],
-			'NIP' => $post['NIP'],
+			'id_user' => $post['nama'],
 			'jabatan' => $post['jabatan'],
 			'jml_h_telat' => $post['telat'],
 			'bln_bonus' => $post['bulan'],
@@ -67,8 +66,7 @@ class BonusModel extends Model
 		$denda = $post['telat'] * 10000;
 		$total = $bonus - $denda;
 		$data = [
-			'nama_karyawan' => $post['nama'],
-			'NIP' => $post['NIP'],
+			'id_user' => $post['nama'],
 			'jabatan' => $post['jabatan'],
 			'jml_h_telat' => $post['telat'],
 			'bln_bonus' => $post['bulan'],
@@ -80,5 +78,18 @@ class BonusModel extends Model
 		];
 
 		$this->db->table($this->table)->where($this->primaryKey, $id)->update($data);
+	}
+
+	public function getAll($id=null)
+	{
+		if ($id) {
+			return $this->db->table($this->table)->join('user','user.id_user = bonus.id_user')->where(['user.id_user' => $id])->get()->getResultArray();
+		}
+		return $this->db->table($this->table)->join('user','user.id_user = bonus.id_user')->get()->getResultArray();
+	}
+	
+	public function getData($id)
+	{
+		return $this->db->table($this->table)->where([$this->primaryKey => $id])->join('user','user.id_user = bonus.id_user')->get()->getRowArray();
 	}
 }

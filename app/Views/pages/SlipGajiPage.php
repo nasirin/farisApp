@@ -3116,7 +3116,7 @@
             <span><?= session('nama') ?></span>
         </div>
         <div id="_Ahmad_Nasirin__123213213__Kur">
-            <span>: <?= $bonus['nama_karyawan'] ?><br />: <?= $bonus['NIP'] ?><br />: <?= $bonus['jabatan'] ?></span><br>
+            <span>: <?= $bonus['nama_user'] ?><br />: <?= $bonus['nik'] ?><br />: <?= $bonus['jabatan'] ?></span><br>
         </div>
         <div id="_Rp_1000__Rp_10000_">
             <span>: Rp. 1000<br />: Rp. 10.000</span><br>

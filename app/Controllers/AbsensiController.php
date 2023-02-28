@@ -80,6 +80,7 @@ class AbsensiController extends BaseController
 		if ($post['btn'] == 'hasil') {
 			return view('pages/absensi/LogAbsensiPage', $data);
 		} else {
+		
 			$html = view('pages/absensi/absensiPrint', $data);
 			$pdf = new Dompdf();
 			$pdf->loadHtml($html);

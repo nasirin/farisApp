@@ -76,8 +76,8 @@
                                             <?php foreach ($bonus as $data) : ?>
                                                 <tr>
                                                     <td><?= $no++ ?></td>
-                                                    <td><?= $data['nama_karyawan'] ?></td>
-                                                    <td><?= $data['NIP'] ?></td>
+                                                    <td><?= $data['nama_user'] ?></td>
+                                                    <td><?= $data['nik'] ?></td>
                                                     <td><?= $data['jabatan'] ?></td>
                                                     <td><?= $data['bln_bonus'] . '/' . $data['thn_bonus']  ?></td>
                                                     <td><?= $data['jml_h_telat'] ?></td>

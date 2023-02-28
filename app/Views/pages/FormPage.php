@@ -11,6 +11,7 @@
             <li class="active">Form Bonus</li>
         </ul>
     </div>
+    
     <!-- /Page Breadcrumb -->
     <!-- Page Header -->
     <div class="page-header position-relative">
@@ -59,11 +60,14 @@
                                     <form role="form" action="/bonus/simpan" method="post">
                                         <div class="form-group">
                                             <label for="xsinput">Nama karyawan</label>
-                                            <input type="text" class="form-control input-sm" name="nama" required id="xsinput" placeholder="Nama karyawan">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="sminput">Nomor induk pegawai</label>
-                                            <input type="text" class="form-control input-sm" id="sminput" placeholder="nomor" name="NIP" required>
+                                            
+                                            <select name="nama" class="form-control input-sm" required>
+                                                <option value="">-- Pilih karyawan --</option>
+                                                <?php foreach ($employee as $value) :?>
+                                                    <option value="<?=$value['id_user']?>"><?= $value['nama_user']?></option>
+                                                    
+                                                <?php endforeach;?>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="definpu">Jabatan</label>

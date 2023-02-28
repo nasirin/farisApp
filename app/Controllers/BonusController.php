@@ -4,34 +4,44 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\BonusModel;
+use App\Models\AuthModel;
 use Dompdf\Dompdf;
 
 class BonusController extends BaseController
 {
 	protected $bonus;
+	protected $user;
 
 	public function __construct()
 	{
 		$this->bonus = new BonusModel();
+		$this->user = new AuthModel();
 	}
 
 	public function index()
 	{
-		$data = [
-			'no' => 1,
-			'bonus' => $this->bonus->findAll(),
-		];
+		if (session('level') == 'karyawan') {
+			$data['bonus'] = $this->bonus->getAll(session('id'));
+		}else{
+			$data['bonus'] = $this->bonus->getAll();
 
+		}
+		$data['no'] = 1;
+		
 		return view('pages/BonusPage', $data);
 	}
 
 	public function form($id = null)
 	{
 		if ($id) {
-			$data['bonus'] = $this->bonus->find($id);
+			$data['bonus'] = $this->bonus->getData($id);
+			$data['employee'] = $this->user->getEmployees();
+			
 			return view('pages/FormPageUbah', $data);
 		} else {
-			return view('pages/FormPage');
+			$data['employee'] = $this->user->getEmployees();
+			
+			return view('pages/FormPage',$data);
 		}
 	}
 
@@ -52,13 +62,12 @@ class BonusController extends BaseController
 
 	public function print($id)
 	{
-		$data['bonus'] = $this->bonus->find($id);
-		$gaji = $this->bonus->find($id);
+		$data['bonus'] = $this->bonus->getData($id);
 		$html = view('pages/SlipGajiPage', $data);
 		$pdf = new Dompdf();
 		$pdf->loadHtml($html);
 		$pdf->setPaper('A4', 'portrait');
 		$pdf->render();
-		$pdf->stream('Slip-Bonus' . '-' . $gaji['nama_karyawan'] . '.pdf');
+		$pdf->stream('Slip-Bonus' . '-' . $data['bonus']['nama_user'] . '.pdf');
 	}
 }

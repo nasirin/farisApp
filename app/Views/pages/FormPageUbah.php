@@ -59,12 +59,18 @@
                                     <form role="form" action="/bonus/simpan/<?= $bonus['id_bonus'] ?>" method="post">
                                         <div class="form-group">
                                             <label for="xsinput">Nama karyawan</label>
-                                            <input type="text" class="form-control input-sm" name="nama" required id="xsinput" placeholder="Nama karyawan" value="<?= $bonus['nama_karyawan'] ?>">
+                                                                                        <select name="nama" class="form-control input-sm" required>
+                                                <option value="">-- Pilih karyawan --</option>
+                                                
+                                                <?php foreach ($employee as $value) :?>
+                                                    <option value="<?=$value['id_user']?>" <?= $value['id_user'] == $bonus['id_user'] ?'selected':''?>>
+                                                    <?= $value['nama_user']?>
+                                                </option>
+                                                    
+                                                <?php endforeach;?>
+                                            </select>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="sminput">Nomor induk pegawai</label>
-                                            <input type="text" class="form-control input-sm" id="sminput" placeholder="nomor" name="NIP" required value="<?= $bonus['NIP'] ?>">
-                                        </div>
+                                        
                                         <div class="form-group">
                                             <label for="definpu">Jabatan</label>
                                             <select name="jabatan" class="form-control input-sm" required>

@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        
+        #ttd{
+            position: absolute;
+right: 0;
+bottom: 0;
+        }
+        #ttd p{
+            text-align: center;
+        }
         #customers {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -67,6 +76,11 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <div id='ttd'>
+        <p><?= session('nama')?></p>
+        <p>STAFF ADMIN</p>
+    </div>
 </body>
 
 </html>
